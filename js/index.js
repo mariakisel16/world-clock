@@ -21,7 +21,7 @@ setInterval(function () {
   }
   let parisElement = document.querySelector("#paris");
   if (parisElement) {
-    let parisTime = moment().tz("America/New_York");
+    let parisTime = moment().tz("Europe/Paris");
     let parisDateElement = parisElement.querySelector(".date");
     parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
     let parisTimeElement = parisElement.querySelector(".time");
@@ -39,6 +39,7 @@ function updateCity(event) {
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector("#cities");
+
   citiesElement.innerHTML = `
   <div class="city">
     <div>
