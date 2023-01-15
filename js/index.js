@@ -19,6 +19,16 @@ setInterval(function () {
       "h:mm:ss [<small>] A [</small>]"
     );
   }
+  let parisElement = document.querySelector("#paris");
+  if (parisElement) {
+    let parisTime = moment().tz("America/New_York");
+    let parisDateElement = parisElement.querySelector(".date");
+    parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
+    let parisTimeElement = parisElement.querySelector(".time");
+    parisTimeElement.innerHTML = parisTime.format(
+      "h:mm:ss [<small>] A [</small>]"
+    );
+  }
 }, 1000);
 
 function updateCity(event) {
@@ -39,6 +49,7 @@ function updateCity(event) {
     "A"
   )}</small></div>
   </div>
+  <br/>
   <a href = "index.html">All cities</a>
   `;
 }
