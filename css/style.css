@@ -45,3 +45,11 @@ select {
 .date {
   opacity: 0.7;
 }
+@media (max-width: 900px) {
+  .time {
+    font-size: 20px;
+  }
+  .time small {
+    font-size: 15px;
+  }
+}
